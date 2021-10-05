@@ -26,8 +26,12 @@ public class Testfirstpage {
         @Test
         public void click() {
             driver.navigate().to(URL);
-            driver.findElement(By.cssSelector("#root > div.page-home > div.hero-background-container.hero-background-container--campaign > div.hero-background > div > div > div.farefinder-container > div > div.farefinder-hotel.farefinder-content > form > div.farefinder-hotel-horizontal__row2 > div.submit-button > button > span")).click();
-            WebElement query = driver.findElement(By.name("Find a Hotel"));
-
-        }
+            driver.findElement(By.xpath("//div[@id='root']/div[2]/div/div/div/div/div/div/div[2]/div[4]")).click();
+            driver.findElement(By.xpath("//div[@id='root']/div[2]/div/div/div/div/div/div/div[3]/form/div/div[2]/button[3]")).click();
+            driver.findElement(By.xpath("//div[@id='root']/div[2]/div/div/div/div/div/div/div[3]/form/div[2]/div/div/input")).sendKeys("San Francisco");
+            driver.findElement(By.xpath("//div[@id='root']/div[2]/div/div/div/div/div/div/div[3]/form/div[3]/div/div/input")).sendKeys("Los Angeles");
+            driver.findElement(By.name("carPickupTime")).sendKeys("Evening");
+            driver.findElement(By.xpath("//div[@id='root']/div[2]/div/div/div/div/div/div/div[3]/form/div[8]/button")).click();
+            }
+                
     }
